@@ -1,13 +1,12 @@
-import { useState, useEffect } from "react";
-import TodoInput from "./components/ToDoInput";
-import TodoList from "./components/TodoList";
+import { useState, useEffect } from "react"
+import TodoList from "./components/TodoList"
+import TodoInput from "./components/ToDoInput"
 
 function App() {
 
   const [todos, setTodos] = useState([
   ]);
   const [todoValue, setTodoValue] = useState('');
-
   function persistData(newList){
     localStorage.setItem('todos', JSON.stringify({
       todos:newList
